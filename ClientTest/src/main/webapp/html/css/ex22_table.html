@@ -5,57 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+
+        body{
+            margin-bottom: 100px;
+            width: 800px; 
+            margin: 0 auto;
+            align-content: left;
+        }
+
         #title{
-            border-bottom: 2px dashed #444;
-            padding-bottom: 3px;
+            border-bottom: 1px dashed #999;
+            font-family: 'Verdana';
             /* font-weight: bold; */
+        }
+
+        #title > span{
+            
+            padding-bottom: 3px;
+            font-size: 30px;
+            font-family: 'Verdana';
+
         }
         h1 > #title1{
             float: left;
-            color: #6495ED;
+            color: cornflowerblue;
             font-family: 'Verdana';
+            font-size: 32px;
             font-variant: small-caps;
             letter-spacing: -1px;
         }
 
         h1 > #title2{
+            /* float: left; */
+            font-size: 30px;
+            margin-top: 30px;
+            color: #444;
+        }
+
+        h1 > #title3{
             float: right;
             font-size: .6em;
             margin-top: 14px;
+            color: #444;
         }
 
         #tbl1{
-            border: 1px solid black;
             margin: center;
             width: 800px;
             border-collapse: collapse;
         }
 
         th, td{
-            border: 1px solid #444;
+            border: 1px solid #CCCCCC;
             /* display: table-cell; */
             /* vertical-align: inherit; */
             text-align: center;
             padding: 1px;
+            width: ;
             
         }
         .cell5{
             text-align: left;
         }
         
+        #col5{
+            background-color: #DDDDDD;
+            font-size: 14px;
+            font-family: 'Verdana';
+            padding: 5px;
+            color: #444;
+
+        }
+
+        .cell1, .cell2, .cell3, .cell4, .cell5{
+            border: 1px solid #CCCCCC;
+            font-size: 14px;
+            font-family: 'Verdana';
+            padding: 5px;
+            color: #444;
+        }
+        
+
+
 
        
     </style>
 </head>
-<body style="width: 800px;">
+<body>
     <!-- ex22_table.html -->
     <h1 id="title">
-        <span id="title1">M</span>EMBER LIST<span id="title2">Table Design</span>
+        <span id="title1">M</span><span id="title2">EMBER LIST</span><span id="title3">Table Design</span>
     </h1>
     <!-- table#tbl1.tbl>tr>th#col5*5 -->
     <table id="tbl1" class="tbl">
         <tr>
-            <th id="col5">No</th>
+            <th id="col5" style="width: auto 17px;">No</th>
             <th id="col5">Name</th>
             <th id="col5">Age</th>
             <th id="col5">ID</th>
