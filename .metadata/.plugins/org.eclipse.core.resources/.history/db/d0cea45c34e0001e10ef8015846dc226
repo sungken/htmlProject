@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex03_basic.html -->
+	<!-- 
+	
+	1. 태그(Tag) / 요소(Element)
+	2. 속성(Attributy)
+	3. 텍스트(PCDATA)
+	-------------------------------------------------------- 많이 쓰임
+	4. 주석(Comment)
+	-------------------------------------------------------- 어느정도 쓰임
+	5. 선언문(Declaration)
+	6. 엔티티(Entity)
+	7. 외부요소
+	8. 등등
+	
+	 -->
+
+
+</body>
+</html>

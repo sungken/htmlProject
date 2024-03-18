@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- ex21_semanic.html -->
+<!-- 
+	
+	HTML5 레이아웃
+	- 블럭 태그(= <div>)
+
+
+ -->
+ 	<div id="main">
+ 		<div id="menu">주메뉴</div>
+ 		<div id="menu">보조메뉴</div>
+ 		<div id="content">내용</div>
+ 		<div id="footer">하단</div>
+ 	</div>
+
+
+
+</body>
+</html>

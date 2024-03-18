@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>이미지 모음</h1>
+<ol type="1">
+	<li></li>
+	<ul type="disc">
+		<li >고양이</li>
+	</ul>
+</ol>
+
+</body>
+</html>

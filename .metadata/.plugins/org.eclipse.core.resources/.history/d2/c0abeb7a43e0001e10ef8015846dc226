@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body bgcolor="#ff0000">
+
+<!-- ex05_body.html -->
+<!-- 
+
+	<body> 태그
+	- 모든 출력 내용을 관리하는 컨테이너
+	
+	
+	<body>
+	1. bgcolor
+		- 문서 배경색
+	
+	2. background
+		- 문서 배경 이미지
+		
+	HTML의 색상 표현법(*****)
+	1. 색상명
+		- Name Color
+		- Well-known Color
+		- 미리 약속된 몇가지 색상명을 사용(약 140여가지)
+		- Web Color Name
+		
+	2. RGB컬러
+		- Red + Green + Blue = 조합
+	
+	
+	
+		
+
+ -->
+
+</body>
+</html>

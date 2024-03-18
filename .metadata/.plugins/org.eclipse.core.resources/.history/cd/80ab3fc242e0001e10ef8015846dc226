@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body bgcolor="white">
+
+<!-- ex05_body.html -->
+<!-- 
+
+	<body> 태그
+	- 모든 출력 내용을 관리하는 컨테이너
+	
+	
+	<body>
+	1. bgcolor
+		- 문서 배경색
+	
+	2. background
+		- 문서 배경 이미지
+		
+
+ -->
+
+</body>
+</html>

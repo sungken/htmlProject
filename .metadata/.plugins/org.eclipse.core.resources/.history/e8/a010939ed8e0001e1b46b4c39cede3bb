@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- ex10_style.html -->
+<!-- 
+
+
+
+
+ -->
+
+<h1>물리적인 모양을 강조하는 태그</h1>
+일반 텍스트<br>
+<b>볼드테</b><br>
+<i>이탤릭체</i><br>
+<u>밑줄을 긋습니다.</u><br>
+<strike>취소선을 긋습니다.</strike>
+H<sub>2</sub>>0<br><!-- 밑첨자 -->
+MC<sub>2</sub>><br><!-- 윗첨자 -->
+<big>큰 글자</big><br>
+<small>작은 글자</small><br>
+<tt>타자기 글자</tt>
+
+
+<h1>의미를 강조하는 태그</h1><br>
+<strong>중요한 데이터입니다.</strong><br><!-- 볼드체 -->
+<em>중요한 데이터입니다.</em><br><!-- 이탤릭체 -->
+<mark>강조할 때 사용</mark><br>
+<city>인용 데이터</city><br><!-- 단일 데이터 -->
+<blockquote>인용 데이터</blockquote><br><!-- 다중 데이터 -->
+<code>int a = 10;</code><br> 
+<samp>샘플 데이터</samp><br>
+<address>주소 데이터</address><br>
+<ins>추가 데이터</ins><br>
+<del>삭제된 데이터</del><br>
+<s>수정된 데이터</s><br>
+<abbr>축약 데이터, 약어</abbr><br>
+<abbr>HTML</abbr><br>
+<bdo dir="ltr">안녕하세요.</bdo><br>
+<bdo dir="rtr">안녕하세요.</bdo><br>
+
+
+</body>
+</html>

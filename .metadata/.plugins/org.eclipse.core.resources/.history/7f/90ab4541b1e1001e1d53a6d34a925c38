@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex20_HTML5.html -->
+
+	<h1>HTML5</h1>
+
+	<form method="POST" action="ex18.jsp">
+	
+		이름: <input type="text">
+	
+		<hr>
+		
+		<label>이름: <input type="text"></label>
+	
+		<hr>
+		<!-- 옛날 방식 -->
+		<input type="text" 
+		value="이름을 입력하세요."
+		onfocus="this.value='';">
+		<!-- 안보임 -->
+		<input type="password" 
+		value="이름을 입력하세요."
+		onfocus="this.value='';">
+	
+		<hr>
+		
+		<!-- 요즘 방식 -->
+		<input type="text" placeholder="이름을 입력하세요.">
+		<input type="password" placeholder="암호를 입력하세요.">
+	
+		<hr>
+		
+		<textarea placeholder="자기소개를 작성하시오." col="50" row="5"></textarea>
+		
+		<hr>
+		
+		<h2>입력값 테크(유효성 검사 - 필수값)</h2>
+		
+		<h3>로그인</h3>
+		<div><input type="text" size="10" placeholder="아이디" required value="1"> </div>
+		<div><input type="password" size="10" placeholder="암호" required value="1"> </div>
+		<!-- 전송되지 않고 오류 발생 *** 필수값 검사 -->
+		
+		<hr>
+		
+		URL: <input type="text">
+		<hr>
+		URL: <input type="url">
+		<!-- 최소한의 유효성 검사를 해줌 -->
+		
+		<hr>
+		
+		Email: <input type="email">
+		
+		<hr>
+		
+		숫자1: <input type="text"> 쓰지 말것
+		<br>
+		숫자2: <input type="number">
+		<br>
+		숫자3: <input type="number" min="0" max="100" step="10">
+		<!-- 범위 조절 (입력이 안되는것이 아니라 전송이 안되는것으로 알아두자***) -->
+		<br>
+		숫자4: <input type="range" oninput="document.getElementById('rtxt1').value=this.value;">
+		<input type="text" id="rtxt1">
+		<!-- 이것도 숫자이다. -->
+		<br>
+		숫자5: <input type="range" oninput="document.getElementById('rtxt2').value=this.value;" min="20" max="500" step="50">
+		<input type="text" id="rtxt2">
+		<!-- 이것도 숫자이다. -->
+		<hr>
+		
+		색상1:
+		<input type="color">
+		
+		<hr>
+		색상2:
+		<input type="color" onchange="document.getElementById('ctxt').value=this.value; document.body.bgColor=this.value;">
+		<input type="text" id="ctxt">
+		
+		<hr>
+		
+		날짜 시간:
+		<input type="date">
+		<hr>
+		<input type="month">
+		<hr>
+		<input type="week">
+		<hr>
+		<input type="time">
+		<hr>
+		<input type="datetime">
+		<hr>
+		<input type="datetime-local">
+		
+		<hr>
+
+		<input type="submit" value="보내기">
+	
+	
+	</form>
+
+
+</body>
+</html>

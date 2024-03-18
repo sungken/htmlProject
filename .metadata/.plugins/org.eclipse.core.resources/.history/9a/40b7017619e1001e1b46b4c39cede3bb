@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>출석부</h1>
+<table  border="1" width="900" height="400">
+	<tr align="center">
+		<td colspan="1" rowspan="5">번호</td>
+		<td colspan="4" rowspan="1">일자</td>
+		<td colspan="4" rowspan="1">03월 31일</td>
+		<td colspan="4" rowspan="1">04월 01일</td>
+		<td colspan="4" rowspan="1">04월 02일</td>
+		<td colspan="4" rowspan="1">04월 03일</td>
+		<td colspan="4" rowspan="1">04월 04일</td>
+		<td colspan="1" rowspan="5">출<br>석<br>일</td>
+		<td colspan="1" rowspan="5">결<br><br>석</td>
+		<td colspan="1" rowspan="5">지<br><br>각</td>
+		<td colspan="1" rowspan="5">조<br><br>퇴</td>
+		<td colspan="1" rowspan="5">확<br><br>인</td>
+	</tr>
+	<tr align="center">
+		<td colspan="4" rowspan="2">기관장<br>결재</td>
+		<td colspan="4" rowspan="2"></td>
+		<td colspan="4" rowspan="2"></td>
+		<td colspan="4" rowspan="2"></td>
+		<td colspan="4" rowspan="2"></td>
+
+	</tr>
+	
+	
+	
+
+</table>
+
+
+
+</body>
+</html>
