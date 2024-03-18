@@ -7,7 +7,8 @@
     <style>
         #title{
             border-bottom: 2px dashed #444;
-            padding-bottom: 5px;
+            padding-bottom: 3px;
+            /* font-weight: bold; */
         }
         h1 > #title1{
             float: left;
@@ -16,13 +17,30 @@
             font-variant: small-caps;
             letter-spacing: -1px;
         }
+
         h1 > #title2{
             float: right;
+            font-size: .6em;
+            margin-top: 14px;
         }
 
         #tbl1{
             border: 1px solid black;
             margin: center;
+            width: 800px;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 1px solid #444;
+            /* display: table-cell; */
+            /* vertical-align: inherit; */
+            text-align: center;
+            padding: 1px;
+            
+        }
+        .cell5{
+            text-align: left;
         }
         
 
@@ -32,7 +50,7 @@
 <body style="width: 800px;">
     <!-- ex22_table.html -->
     <h1 id="title">
-        <span id="title1">M</span>ember List<span id="title2">Table Design</span>
+        <span id="title1">M</span>EMBER LIST<span id="title2">Table Design</span>
     </h1>
     <!-- table#tbl1.tbl>tr>th#col5*5 -->
     <table id="tbl1" class="tbl">
