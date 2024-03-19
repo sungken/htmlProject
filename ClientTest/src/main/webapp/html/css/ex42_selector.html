@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/808925651e.js" crossorigin="anonymous"></script>
+    <style>
+        /* 
+        
+        CSS 선택자
+        1. :first-child
+            - 가상 클래스
+
+        2. ::before
+            - 가상 요소
+
+
+        전후 선택자
+        - 선택한 요소의 앞이나 뒤에 (자식으로) 내용을 추가하는 역할s
+        1. ::before
+            - :before
+        2. ::after
+            - :after
+        */
+
+        p > span{color: gold;}
+
+        /* p > span::before{
+            content: '문자열';
+            color: blue;
+            font-size: 2rem;
+        }
+
+        p > span::after{
+            content: '문자열';
+            color: tomato;
+            font-style: italic;
+        } */
+
+        p > span::before {
+            font-family: FontAwesome;
+            font-weight: 400;
+            content: "\e07b";
+            margin-right: 5px;
+        }
+        
+        i{
+            font-size: 500px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ex42_selector.html -->
+    <!-- p>lorem50 -->
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus <span>voluptates,</span> rem quam maxime fuga ex earum aspernatur id animi quis sequi <span>neque</span> ipsum deserunt distinctio officiis magni, aut quos deleniti? Esse consequatur blanditiis atque, facilis, <span>aspernatur</span> pariatur impedit fuga, beatae vero mollitia laborum necessitatibus voluptates quidem numquam maiores qui nisi?</p>
+
+    <i class="fa-solid fa-hippo"></i>
+
+</body>
+</html>
