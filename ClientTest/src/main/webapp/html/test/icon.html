@@ -8,35 +8,137 @@
 <style>
 
     body{
-        width: 690px;
-        
+        width: 680px;
+        margin: 0 auto;
     }
 
-#menu{
-            font-size: 0;
-            width: 630px;
-            border: 10px solid black;
-            margin: 0 auto;
-            transform: translate(-100px, 0px);
-        }
+    #menu1, #menu1-5, #menu2, #menu3, #menu4, #menu5 {
+        width: 680px;
+        margin: 10px auto;
+        border: 0px solid black;		
+    }
+        
+    #menu1 div, #menu1-5 div, #menu2 div, #menu3 div, #menu4 div, #menu5 div {
+        float: left;
+        margin-right: -10px;
+        border: 10px solid black;
+        overflow: hidden;
+    }
 
-        #menu > img:hover{
-            transform: translate( 100px, 0px);
-            transition: .7s all;
+    #menu1 img, #menu1-5, #menu2 img, #menu3 img, #menu4 img{
+        margin-bottom: -4px;
+    }
+
+    #menu1 img{
+        display: block;
+        transform: translate(-146px, 0px);
+        transition: all .5s;
+    }
+
+    #menu1 div:hover img{
+        transform: translate(0px, 0px);
+    }
+
+    #menu1-5 img{
+        display: block;
+        transform: translate(-100%);
+        transition: all .5s;
+    }
+
+    #menu1-5 div:hover img{
+        transform: translate(0%);
+    }
+
+    #menu2 img{
+        display: block;
+        opacity: 0;
+        transition: all .7s;
+    }
+
+    #menu2 div:hover img{
+        opacity: 1;
+    }
+
+    #menu3 img{
+        display: block;
+        transform: scale(0,0);
+        opacity: 0;
+        transition: all .7s;
+    }
+
+    #menu3 div:hover img{
+        opacity: 1;
+        transform: scale(1,1);
+    }
+
+    #menu4 img{
+        display: block;
+        transform: translate(0px, -146px) scale(0.0) rotate(0deg);
+        transition: all .7s;
+    }
+
+    #menu4 div:hover img{
+        transform: translate(0px, 0px) scale(1.1) rotate(360deg);
+    }
+
+   
+
+
+
+
+
+    #menu1:after, #menu1-5:after, #menu2:after, #menu3:after, #menu4:after {
+            content: " ";
+            display: block;
+            clear: both;
         }
+    
 
 
 </style>
 <body>
     <!-- icon.html -->
-    <nav id="menu">
-        <!-- (img[src=../images/rect_icon$$.png])*5 -->
-        <img src="../images/rect_icon01.png" alt="">
-        <img src="../images/rect_icon02.png" alt="">
-        <img src="../images/rect_icon03.png" alt="">
-        <img src="../images/rect_icon04.png" alt="">
-        <img src="../images/rect_icon05.png" alt="">
-    </nav>
+    <div id="menu1">
+        <div><img src="../images/rect_icon01.png"></div>
+        <div><img src="../images/rect_icon02.png"></div>
+        <div><img src="../images/rect_icon03.png"></div>
+        <div><img src="../images/rect_icon04.png"></div>
+        <div><img src="../images/rect_icon05.png"></div>
+    </div>
+
+    <div id="menu1-5">
+        <div><img src="../images/rect_icon01.png"></div>
+        <div><img src="../images/rect_icon02.png"></div>
+        <div><img src="../images/rect_icon03.png"></div>
+        <div><img src="../images/rect_icon04.png"></div>
+        <div><img src="../images/rect_icon05.png"></div>
+    </div>
+
+    <div id="menu2">
+        <div><img src="../images/rect_icon01.png"></div>
+        <div><img src="../images/rect_icon02.png"></div>
+        <div><img src="../images/rect_icon03.png"></div>
+        <div><img src="../images/rect_icon04.png"></div>
+        <div><img src="../images/rect_icon05.png"></div>
+    </div>
+
+    <div id="menu3">
+        <div><img src="../images/rect_icon01.png"></div>
+        <div><img src="../images/rect_icon02.png"></div>
+        <div><img src="../images/rect_icon03.png"></div>
+        <div><img src="../images/rect_icon04.png"></div>
+        <div><img src="../images/rect_icon05.png"></div>
+    </div>
+
+    <div id="menu4">
+        <div><img src="../images/rect_icon01.png"></div>
+        <div><img src="../images/rect_icon02.png"></div>
+        <div><img src="../images/rect_icon03.png"></div>
+        <div><img src="../images/rect_icon04.png"></div>
+        <div><img src="../images/rect_icon05.png"></div>
+    </div>
+    
+    
 
     
 </body>

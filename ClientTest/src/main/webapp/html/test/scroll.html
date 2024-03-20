@@ -13,17 +13,28 @@
         }
         
         #box1{
-            margin: 100px auto;
             border: 1px solid black;
             width: 500px;
             height: 200px;
-            position: absolute;
-            transform: 10s all;
-            transition-timing-function: linear;
+            position: relative;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+
         }
 
-        #main #box1:hover{
-            /* top: -6000px; */
+
+        #box2{
+            width: 500px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            transition-timing-function: linear;
+            transition: 10s all;
+        }
+
+        #box2:hover {
+            top:-2200px;
         }
 
 
@@ -35,6 +46,7 @@
     <div id="main">
         <h1>transition</h1>
         <div id="box1">
+            <div id="box2">
             <h1>Lorem ipsum dolor sit amet.</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo corrupti sunt dignissimos accusantium suscipit! Consequatur minima expedita unde molestias ea.</p>
             <p>Ullam, sint accusantium. Optio quam voluptates ab beatae cupiditate ratione tempora perferendis assumenda, mollitia debitis, voluptatibus, sit repellendus illum harum.</p>
@@ -65,7 +77,7 @@
             <p>Animi voluptatum saepe sunt, repellat iusto quae omnis, repudiandae, voluptatem maxime voluptas similique ab delectus quibusdam consequuntur numquam? Quisquam, expedita.</p>
             <p>Aperiam corporis provident eveniet recusandae pariatur consequatur perferendis, suscipit amet nemo! Deserunt, omnis eveniet delectus architecto ducimus quis quaerat exercitationem!</p>
             <p>Debitis hic atque, libero sunt facere, omnis beatae iure veniam distinctio ipsam id iusto! Consequuntur repellendus neque corrupti fugit at.</p>
-
+        </div>
         </div>
 
     </div>
