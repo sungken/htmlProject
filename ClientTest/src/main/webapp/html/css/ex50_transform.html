@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/box.css">
+    <style>
+        .box{
+            margin: 20px;
+        }
+
+        /* 
+            변형, transform
+            - 요소의 위치, 크기, 회전, 비틀기(왜곡)
+            - transform: 값;
+
+            값(함수)
+            1. translate() > 위치 변형
+            2. scale() > 배율 (크기) 변형
+            3. rotate() > 회정 변형
+            ----------------------------
+            4. skew() > 왜곡 변형
+            5. matrix() > X(행렬)
+        
+        */
+
+        #box2{
+            /* transform: translate(100px, 100px); */
+
+            /* 박스 자체(내용물 포함)가 커진다. */
+            /* transform: scale(1, 1); */
+
+            /* 박스 자체(반전) */
+            /* transform: scale(-1, -1); */
+
+            /* margin-left: 200px; */
+
+            /* 각도 돌리기 */
+            /* transform: rotate(-30deg); */
+            /* transform: rotate(30deg); */
+
+            /* transform: skew(0deg, 0deg); */
+
+        }
+        /* 
+            1. position: 레이아웃
+            2. transform: 인터페이스(사용법)
+        
+        */
+        /* #cat img:hover{
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat img:hover + img{
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat img:hover ~ img{
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat:hover img:nth-child(even){
+            transform: translate(0px, -15px);
+        } */
+
+        /* #cat:hover img:nth-child(odd){
+            transform: translate(0px, -15px);
+        } */
+
+        #cat img:hover{
+            /* transform: translate(0px, -15px); */
+            /* transform: scale(1.5, 1.5); */
+
+            /* 동시에 적용하는 방법 */
+            /* transform: translate(0px, -55px) scale(-1.5, -1.5); */
+
+            transform: rotate(20deg);
+        }
+
+        #txt1{
+            margin: 50px;
+            font-size: 2rem;
+            padding: 10px;
+            /* transform: scale(1, 1); */
+            /* transform: rotate(45deg); */
+
+            transform: skew(0deg, 0deg);
+        }
+
+        /* body{
+            transform: rotate(45deg);
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- ex50_transform.html -->
+    <div id="box1" class="box bgcolor-red border10"></div>
+    <div id="box2" class="box bgcolor-yellow border10">상자</div>
+    <div id="box3" class="box bgcolor-blue border10"></div>
+
+    <input type="text" class="bgcolor-yellow">
+
+    <h1>고양이</h1>
+    <div id="cat">
+        <img src="../images/catty01.png">
+        <img src="../images/catty02.png">
+        <img src="../images/catty03.png">
+        <img src="../images/catty04.png">
+        <img src="../images/catty05.png">
+    </div>
+
+
+    <div>
+        <input type="text" id="txt1">
+    </div>
+</body>
+</html>

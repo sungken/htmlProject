@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: gold;
+            margin: 100px;
+        }
+
+        body{
+            padding-bottom: 500px;
+        }
+
+
+        body:hover #box{
+            /* background-color: blue; */
+            transform: rotate(45deg);
+            /* transform: scale(2, 2); */
+
+            transition: 3s all;
+
+            /* 변화 중심축 (헷갈림)*/
+            /* transform-origin: right bottom; */
+            /* transform-origin: 0px 0px; */
+            /* transform-origin: 50% 100%; */
+            transform-origin: 0px 400px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- ex52_transform.html -->
+
+    <div id="box">상자</div>
+
+
+
+
+</body>
+</html>

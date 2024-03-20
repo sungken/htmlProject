@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            border: 1px solid black;
+            width: 200px; 
+            height: 200px;
+            background-color: gold;
+            margin: 100px;
+        }
+
+        body {
+            padding-bottom: 500px;
+        }
+
+        /* 
+        
+        전환, transition
+        - 객체의 속성(값)
+        
+        
+        */
+
+        #box{
+            /* 애니메이션 대상 지정 */
+            /* transition-property: width, height, font-size; */
+            /* transition-property: all; */
+
+            /* 애니메이션 실행되는 시간 */
+            /* transition-duration: 1s; */
+
+            /* 대상 지정과 시간 동시에 */
+            transition: 1s all;
+        }
+        
+        body:hover #box {
+            /* width: 300px; */
+            /* height: 300px; */
+            /* font-size: 5rem; */
+            /* font-family: '궁서체'; */
+            /* opacity: 0; */
+            /* background-color: aqua; */
+            /* border-width: 100px; */
+            /* border-radius: 50%; */
+            /* margin-left: 300px; */
+            /* transform: translate(100px, 0px); */
+            /* transform: scale(-1, 1); */
+            transform: rotate(360deg);
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex53_transition.html -->
+    <div id="box">상자</div>
+
+</body>
+</html>
