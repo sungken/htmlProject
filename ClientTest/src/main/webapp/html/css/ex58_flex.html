@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{border: 10px solid black;}
+        #box .item:nth-child(5n+1){background-color: tomato;}
+        #box .item:nth-child(5n+2){background-color: orange;}
+        #box .item:nth-child(5n+3){background-color: gold;}
+        #box .item:nth-child(5n+4){background-color: greenyellow;}
+        #box .item:nth-child(5n+5){background-color: cornflowerblue;}
+
+        /* 가로 배치 */
+        /* #box{
+            font-size: 0px;
+        }
+        #box .item{
+            display: inline;
+            font-size: 1rem;
+        } */
+
+        /* --------------------------- */
+        /* ***많이 씀 */
+        /* #box .item{
+            float: left;
+        }
+        #box::after{
+            content: " ";
+            display: block;            
+            clear: both;
+        } */
+        /* --------------------------- */
+
+        /* 
+        display: flex;
+        - flex box, fleiable box
+        - 레이아웃 작성 > 요소 배치에 사용
+        
+        */
+
+        /* ******많이 씀******* */
+        #box{
+            width: 600px;
+            height: 400px;
+            display: flex;
+
+        /* 
+            기본 상태
+            - 메인 축(아이템을 나열하는 방향): 가로(좌>우)
+            - 수직 축(메인 축의 직각 방향): 세로(상>하)
+            - 아이템 너비: 내용물 만큼
+            - 아이템 높이: 부모 만큼
+        */
+
+        /* 
+        flex-direction
+        - 아이템 배치 방향
+        1. row: 행을 메인축으로 하는 방향
+        2. column: 열을 메인축으로 하는 방향
+        
+        */
+        /* 기본값 */
+        /* flex-direction: row; */
+        
+        /* 행열을 바꾸기 */
+        /* flex-direction: column; */
+
+        /* 축의 방향을 반대로 */
+        /* flex-direction: row-reverse; */
+        
+        /* 열의 방향을 반대로 */
+        /* flex-direction: column-reverse; */
+
+        /* 
+        
+        flex-wrap
+        - 자동 줄바꿈
+
+        */
+        
+        /* flex-wrap: nowrap; */
+        
+        /* 자동 줄바꿈 */
+        /* flex-wrap: wrap; */
+        
+        /* 
+        flex 솬련 속명
+        1. justify: 메인축 방향 관련 속성
+
+        2. align: 수직축 방향과 관현된 속성
+        */
+        
+        /* 
+        justify-content- 메인축 방향 + 아이템 정렬
+        
+        
+        */
+        /* 기본값 */
+        /* justify-content: flex-start; */
+        
+        /* 메인 축의 끝으로 정렬 */
+        /* justify-content: flex-end; */
+        
+        /* 가운데 정렬 */
+        /* justify-content: center; */
+        
+        /* 균등하게 1/n로 만들어줌 */
+        /* justify-content: space-between; */
+        
+        /* 좌우에 공백을 반들어줌(기존 공백의 절반으로 좌우에 넣어줌) */
+        /* justify-content: space-around; */
+        
+        /* 좌우에 공백을 반들어줌(기존 공백과 같이 좌우에 넣어줌) */
+        /* justify-content: space-evenly; */
+
+    /* ---------------------------------------------- */
+
+        /* 
+            align-items
+            - 수직축 방향 + 아이템 정렬
+        */
+        /* 기본값 */
+        align-items: stretch;
+
+        /*위쪽에 붙이기 */
+        /* align-items: flex-start; */
+
+        /* 아래쪽에 붙이기 */
+        /* align-items: flex-end; */
+
+        /* 중앙에 넣기 */
+        /* align-items: center; */
+        
+        /* ***박스 중앙에 정렬하기*** */
+        justify-content: center;
+        align-items: center;
+    }
+
+    #title1, #title2{
+        font-variant: small-caps;
+        columns: #333;
+        font-family: Arial;
+        letter-spacing: -1px;
+        border-bottom: 1px dashed #999;
+        width: 600px;
+    }
+
+    /* 기존 방법 */
+    #title1 small{
+        font-size: 1rem;
+        float: right;
+        margin-top: 14px;
+    }
+
+    /* flex 방법 */
+    #title2{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        justify-content: spa;
+    }
+
+    #title2 small{
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- ex58_flex.html -->
+    <h1>Flex</h1>
+
+    <div id="box">
+        <div class="item">1.딸기</div>
+        <div class="item">2.바나나</div>
+        <div class="item">3.귤</div>
+        <div class="item">4.망고</div>
+        <div class="item">5.바이올렛스위트루비</div>
+    </div>
+
+    <hr>
+    <h1 id="title1">Main Title <small>Sub Title</small></h1>
+    
+    <hr>
+    <h1 id="title2">Main Title <small>Sub Title</small></h1>
+    <hr>
+
+
+</body>
+</html>
