@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex09_date.html -->
+    <script>
+        //날짜 시간
+        // - 내장 객체 > Date
+
+        //현재 시각
+        var now = new Date();// new 생성자 함수();
+        console.log(now);
+        console.log(now.toString());
+        console.log(typeof now);
+
+
+        //요소 추출
+        // - c.get(calendar.YEAR)
+        console.log(now.getYear());             //124       > 1900년대
+        console.log(now.getFullYear());         // 2024     > 2000년대
+        console.log(now.getMonth());            //2         > 월(0부터)
+        console.log(now.getDate());             //22        > 일
+        console.log(now.getDay());              //5         > 5(일(0) ~ 토(6))
+        console.log(now.getHours());            //14        > 시간
+        console.log(now.getMinutes());          //8         > 분
+        console.log(now.getSeconds());          //18        > 초
+        console.log(now.getMilliseconds());     //891       > 1970년 부터 지금까지
+        console.log(now.getTime());             //1711084098753  > 1970년 부터 지금까지 초
+
+        //출력, %F, %tT, %tA
+        console.log(now.toString());
+        console.log(now.toLocaleString()); // 2024. 3. 22. 오후 2:11:51
+
+        console.log(now.toDateString());
+        console.log(now.toTimeString());
+        
+        console.log(now.toLocaleDateString()); //2024. 3. 22.
+        console.log(now.toLocaleTimeString()); //오후 2:12:55
+
+        //특정 시각 만들기
+        var christmas = new Date();
+
+        christmas.setFullYear(2024);
+        christmas.setMonth(11); // 0부터 시작해서 12월 은 11로 표기
+        christmas.setDate(25);
+
+        christmas.setHours(21);
+        christmas.setMinutes(0);
+        christmas.setSeconds(0);
+
+        console.log(christmas.toLocaleString());
+
+        // var birthday = new Date(1995, 10, 10);
+        var birthday = new Date(1995, 10, 10, 12, 30, 0);
+
+        console.log(birthday);
+
+        // 연산
+        // 시각 - 시간
+         console.log(christmas - now); // sql(일), JavaScript(ms)
+         console.log((christmas - now) / 1000 / 60 / 60 / 24); // 올해 크리스마스 남은 일
+
+         // 시각 + 시간
+         // 시각 - 시간
+         var ani = new Date();
+        //  console.log(ani + 1000000) // +연산자는 사용 불가능
+         
+        ani.setTime(ani.getTime() + (100 * 24 * 60 * 60 * 1000))
+        console.log(ani.toLocaleString()); // 오늘부터 100일뒤의 시간
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

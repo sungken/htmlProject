@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex06_scope.html  -->
+    <script>
+
+        /*
+        
+        변수의 스코프
+        
+        java 
+        1. 멤버 변수 > 클래스 전역
+        2. 지역 변수 > 메소드 or 제어문 전역
+
+        자바스크립트
+        1. 전역 변수(Global Variable) > 한 페이지 전체
+
+
+        2. 지역 변수(Local Variable)
+        
+        */
+
+        var num1 = 100; // 전역 변수. <script>태그 내에서 직접 선언
+        console.log(num1);
+
+        function m1(){
+            var num2 = 200; // 지역변수. m1을 영역
+            console.log(num2);
+        }
+        m1();
+        // console.log(num2); //num2 is not defined
+        
+        if(num1 > 0){
+            console.log('참');
+            var num3 = 300; // 전역 변수 ***
+            console.log(num3);
+        }
+
+        // 자바의 지역 변수 > 블럭 스코프(Block-scoped) 변수
+        // 자바스크립트의 지역 변수 > 함수 스코프(function-scoped) 변수
+        console.log(num3);
+
+
+        function m2(){
+            if(true){
+                var num4 = 400;
+            }
+        }
+        // console.log(num4);
+
+        var num5 = 500;
+        num6 = 500;
+
+        console.log(num6);
+
+        function m3(){
+            var num7 = 700; // 지역 변수
+            num8 = 800; // 전역 변수
+        }
+        m3();
+
+        // console.log(num7);
+        console.log(num8); // var이 없는 변수는 모든 전역 변수로 생성이 된다.(사용 금지)
+
+    </script>
+</body>
+</html>
