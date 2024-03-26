@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex37_variable.html -->
+
+    <script>
+
+        /* 
+        
+        JavaScript Core
+
+        1. var 
+            - BOM / DOM / ES6 
+            - function-scoped
+            - 제어문 (영역 인식 불가능)
+            - 중복 선언 가능
+            - 산수 선언 불가능(final)
+
+        2. let
+            - ES6(ECMAScript 2015)
+            - block-scoped(함수, 제어문)
+            - 중복 선언 불가능
+            
+        3. const
+            - ES6(ECMAScript 2015)
+            - block-scoped(함수, 제어문)
+            - 중복 선언 불가능
+            - 상수(=final 변수)
+            
+        */
+
+        // var a = 10;
+        // var a = 20;
+        // console.log(a);
+
+        let a = 10; // 전역변수
+
+        function m1(){
+            let b = 20; //지역변수
+        }
+
+        m1();
+        // console.log(b); // 에러
+
+        if(a > 0){
+            let c = 30; // 지역변수(if)
+            var d = 40; // 전역 변수
+        }
+
+        // console.log(c); // 에러
+        // console.log(d);
+
+        // let a = 50; // 에러
+
+        const PI = 3.14;
+        // PI = 5.28; // 에러
+        // console.log(PI);
+
+        var list = [10, 20, 30, 40, 50 ];
+        for (var i =0; i<list.length; i++){
+
+        }
+        //전역변수 var 은 i가 루프를 나와도 살아있다....
+        console.log(i);
+
+        for (let j =0; j<list.length; j++){
+
+        }
+        // 그래서 let이라는 변수를 사용!!!
+        console.log(j);
+
+    </script>
+
+
+
+
+</body>
+</html>
