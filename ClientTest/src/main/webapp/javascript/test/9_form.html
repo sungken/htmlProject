@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+        color: #777;
+        font-family: 'GmarketSansMedium';
+    }
+
+    fieldset{
+        border: 1px solid #777;
+    }
+    
+    fieldset legend{
+        padding-bottom: 5px;
+    }
+
+    div{
+        padding: 5px;
+    }
+
+    #box1{
+        padding: 15px;
+    }
+
+    
+
+
+
+</style>
+<body>
+    <!-- 9_form.html -->
+
+    <h3>주문하기</h3>
+
+    <fieldset>
+        <legend>주문하시는 분</legend>
+        <div>이름 : <input type="text" id="name1"></div>
+        <div>주소 : <input type="text" id="address1"></div>
+    </fieldset>
+
+    <div id="box1">
+        <input type="checkbox" id="btn1"> 주문하시는분과 정보가 동일합니다.
+    </div>
+
+    <fieldset>
+        <legend>받으시는 분</legend>
+        <div>이름 : <input type="text" id="name2"></div>
+        <div>주소 : <input type="text" id="address2"></div>
+    </fieldset>
+
+
+
+    <script>
+
+    let btn1 = document.all.btn1;
+    let name1 = document.all.name1;
+    let address1 = document.all.address1;
+    let name2 = document.all.name2;
+    let address2 = document.all.address2;
+
+    btn1.onclick = m1;
+    function m1(){
+        if (btn1.checked) {
+            name2.value = name1.value;
+            address2.value = address1.value;
+        } else {
+            name2.value = '';
+            address2.value = '';
+        }
+    }
+
+
+    </script>
+
+
+
+
+</body>
+</html>

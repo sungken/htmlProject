@@ -11,22 +11,29 @@
         }
 
         #tbl1{
-            border: 1px solid #777;
+            /* border: 1px solid #777; */
             border-collapse: collapse;
             width: 600px;
             height: 130px;
             outline: none;
         }
 
-        #tbl1 th{
+        #tbl1 tr{
             border: 1px solid #777;
-            outline: none;
+        }
+
+        #tbl1 th{
+            border-right: 1px solid #777;
+            /* outline: none; */
             background-color: #DEDEDE;
+            width: 100px;
+            height: 25px;
+            padding: 10px;
+            display: block;
 
         }
 
         #tbl1 td{
-            border: 1px solid #777;
             outline: none;
 
         }
@@ -42,11 +49,18 @@
         }
 
         #box1{
-            border: 1px solid black;
-            padding-to;
-            width: 100px;
-            height: 20px;
+            border: 1px solid #777;
+            padding: 2px -5px 2px -5px;
+            width: 60px;
+            height: 17px;
             display: inline-block;
+        }
+
+        #box2, #box3{
+            border: 1px solid #777;
+            width: 455px;
+            height: 20px;
+            padding-left: 3px;
         }
 
 
@@ -61,15 +75,15 @@
         <table id="tbl1">
             <tr>
                 <th>우편번호</th>
-                <td><div id="box1" class="box"></div><input type="button" value="우편번호검사하기" id="btn1"></td>
+                <td><input type="text" id="box1"><input type="button" value="우편번호검사하기" id="btn1" onclick="search()";></td>
             </tr>
             <tr>
                 <th>주소</th>
-                <td><input type="text"></td>
+                <td><input type="text" id="box2"></td>
             </tr>
             <tr>
                 <th>상세주소</th>
-                <td><input type="text"></td>
+                <td><input type="text" id="box3"></td>
             </tr>
         </table>
     </form>
