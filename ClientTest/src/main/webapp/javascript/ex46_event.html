@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            padding: 50px;
+        }
+        #p1{background-color: tomato;}
+        #p2{background-color: gold;}
+        #p3{background-color: cornflowerblue;}
+
+    </style>
+</head>
+<body>
+    <!-- ex46_event.html -->
+
+    <div id="p1" class="box">
+        <div id="p2" class="box">
+            <div id="p3" class="box"></div>
+        </div>
+    </div>
+
+    <hr>
+
+    <input type="text" id="txt1">
+
+
+    <script>
+
+        // 이벤트 버블링(Event Bubbling)
+        // 이벤트 터널링(Event Tunneling) == 이벤트 캡쳐링(Capturing)
+
+        const p1 = document.getElementById('p1');
+        const p2 = document.getElementById('p2');
+        const p3 = document.getElementById('p3');
+
+        // document.body.onclick = function () {
+        //     alert('body');
+        // };
+
+        // p1.onclick = function(){
+        //     alert('빨강');
+        //     event.cancelBubble = true;
+        // };
+        
+        // p2.onclick = function(){
+        //     alert('노랑');
+        //     event.cancelBubble = true; 
+        //     // 버블링을 제거하는 방법(독립적으로 선택 가능)
+        // };
+        
+        // p3.onclick = function(){
+        //     alert('파랑');
+        //     // event.cancelBubble = true; // 비표준
+        //     // 버블링을 제거하는 방법(독립적으로 선택 가능)
+
+        //     //.cancelBubble과 같은 함수
+        //     event.stopPropagation(); // 표준
+        // };
+
+        // 영역의 관해서 확인해 봤다.
+        // 이제 자바스크립트에서 부모 자식간의 이벤트 순서도 확인해보자.
+        // 자바 스크립트의 기본형을 버블링이고 자식부터 인식해서 부모로 이벤트를 확인한다. (계층 구조)
+
+        //-----------------------------------------------------------
+
+        // 이런경우 .cancelBubble를 사용해서 잘 처리하기
+        window.onkeydown = function(){
+            if(event.keyCode == 51){ // 3
+                location.href = 'https://naver.com';
+            }
+        };
+
+
+        document.getElementById('txt1').onkeydown = function (){
+            if(event.keyCode >= 48 && event.keyCode <= 57){
+                alert('숫자');
+                event.cancelBubble = true;
+            }
+        }
+
+        // 자바스크립트 이벤트 전파 방식 > 버블링
+
+        // 1. BOM 이벤트
+            // - 무조건 버블링
+
+        // 2. DOM 이벤트
+            // - 버블링 or 터널링
+
+        // p1.addEventListener('click', function(){
+        //     alert('빨강');
+        // }); // 기본이 false, false - 버블링, true - 터널링
+
+        // p2.addEventListener('click', function(){
+        //     alert('노랑');
+        // });
+
+        // p3.addEventListener('click', function(){
+        //     alert('파랑');
+        // });
+
+        p1.addEventListener('click', function(){
+            alert('빨강');
+            event.cancelBubble = true;
+            // event.stopPropagation();
+        }, true); //false - 버블링, true - 터널링
+
+        p2.addEventListener('click', function(){
+            alert('노랑');
+        }, true);
+
+        p3.addEventListener('click', function(){
+            alert('파랑');
+        }, true);
+
+    </script>
+
+
+
+
+</body>
+</html>

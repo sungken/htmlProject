@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/7121714adf.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin-bottom: 300px;
+        }
+
+        #box1 {
+            border: 1px solid black;
+            width: 200px; height: 200px;
+        }
+
+        .one { font-size: 3rem; }
+        .two { color: coral; } 
+        .three { text-decoration: underline; }
+        .four{
+            font-size: 3rem;
+            color: coral;
+            font-family: '궁서체';
+            font-style: italic;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex50_css.html -->
+
+    <h1>CSS</h1>
+    <input type="button" value="버튼" id="btn1">
+    <input type="button" value="버튼" id="btn2">
+
+    <hr>
+    <!-- <div id="box1" style="width: 200px;">상자</div> -->
+    <div id="box1">상자</div>
+
+    <h2>Text</h2>
+    <div class="tool">
+        <button type="button" id="btn3"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        <button type="button" id="btn4"><i class="fa-solid fa-magnifying-glass-plus"></i></button>
+    </div>
+
+    <p id="content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sapiente praesentium enim aliquam dicta autem quisquam cupiditate vitae, cum voluptatem molestias quo, ut id expedita. Corporis, fugiat. Quia autem eos quos quae culpa veritatis tenetur dignissimos laborum nemo, quam dicta voluptas qui ea doloremque dolor, in accusantium laudantium minus magni ut expedita nobis aperiam illo. Soluta consequuntur ipsam ipsum repellendus laborum nulla nisi excepturi error. Magnam doloribus nostrum optio iste quas expedita eos quis cumque explicabo, nemo voluptatum deserunt similique vel et distinctio. Modi nulla quaerat asperiores blanditiis saepe, excepturi voluptates dolorum impedit expedita quia suscipit neque minima, facere sint. Quam velit magnam debitis labore neque saepe quibusdam est, recusandae perferendis distinctio, explicabo voluptates nam sapiente dicta. Tempora quisquam ea magnam voluptatibus error suscipit aliquid quaerat cumque nobis. Magni cumque blanditiis, repellendus harum a nam deserunt tempore! Officia ullam ipsum, dicta autem inventore reprehenderit unde sit, exercitationem cum quibusdam maxime saepe ex eaque eos iure minus magnam, quas quidem! Aut voluptatem numquam dignissimos corporis doloremque et ex ea voluptate deserunt provident aliquam ullam, iusto sequi vitae unde, necessitatibus totam illo minus neque? Magni nihil amet numquam explicabo architecto voluptate veniam? Ipsam a eum eveniet voluptatum excepturi nostrum, nisi quidem similique. Doloremque ullam et eum porro quia vitae fuga distinctio eius sit commodi iure accusantium fugiat nisi praesentium officiis, iusto magnam dolore nostrum inventore nihil? Provident quo rerum exercitationem perferendis, neque deleniti aut, aspernatur labore explicabo error quibusdam ut officia quis cumque consectetur reprehenderit saepe itaque. Vitae aperiam voluptatem cum veritatis ut vero minima cumque, alias quam repudiandae sunt molestias libero odit dolore reiciendis nesciunt amet dolorum vel, error in deleniti! Perspiciatis qui, ipsam soluta, placeat odio rerum corporis voluptatibus ducimus harum earum maiores porro maxime. Dignissimos maxime aut officiis? Quod sapiente sit natus iure nam ab corrupti accusamus culpa ipsum.</p>
+
+
+
+
+    <script>
+        
+        
+        const box1 = document.getElementById('box1');
+
+        // btn2.onclick = function(){
+        //     alert();
+        // }
+
+        document.getElementById('btn1').onclick = function() {
+
+            // const box1 = document.getElementById('box1');
+
+            /*  
+                JavaScript > CSS 조작
+                1. 모든 태그 > style 속성 제공
+                    - 자바스크립트 > style 프로퍼티 제공
+                    - *** CSS의 속성 명이 자바스크립트의 프로퍼티 명이 되려면 
+                        > 1. 속성명은 동일하게 제공
+                        > 2. 케밥 표기법(-) > 캐멀 표기법으로 변경
+                    - *** CSS 속성값
+                        - 대부분이 문자열로 작성
+                        
+                2. Class 조작
+
+            */
+
+
+            //Cannot set properties of null
+
+            //<div id="box1" style="color:blue; font-size: 3rem;">
+
+            //조직적인 관리 힘듦
+            //box1.style = 'color: blue; font-size: 3rem;';
+
+            //box1.style.color = 'blue';
+            //box1.style.fontSize = '3rem';
+
+            //box1.style['color'] = 'blue';
+            //box1.style['font-size'] = '3rem';
+
+            //현재 상자의 너비?
+            //box1.style.width = '400px';
+            //alert(box1.style.width);
+
+            //버튼 클릭 > 상자의 너비 + 50px
+
+            //                 200px + 50
+            // box1.style.width = parseInt(box1.style.width) + 50 + 'px';
+
+            //CSS 적용 방식과 무관 > 현재 객체에 적용된 모든 CSS 속성 반환
+            const list = window.getComputedStyle(box1);
+
+            //  console.log(list);
+            // 바로 태그를 통해 알수 있다.
+            // alert(list.width); // 아래와 동일 
+            alert(list.getPropertyValue('width'));// 잘 안씀
+
+        };
+
+
+
+        let size = 16;
+
+        document.title = size;
+
+        document.getElementById('btn3').onclick = function() {
+            //alert(document.getElementById('content').style.fontSize);
+            size--;
+            document.getElementById('content').style.fontSize = size + 'px';
+
+        };
+
+        document.getElementById('btn4').onclick = function() {
+            size++;
+            document.getElementById('content').style.fontSize = size + 'px';
+        };
+
+
+        document.getElementById('btn2').onclick = function() {
+
+            // box1.style.fontSize = '3rem';
+            
+            //<div class="one two">
+                //box1.className = 'one two three';
+                
+                // box1.classList.add('one');
+                // box1.classList.add('two');
+                // box1.classList.add('three');
+                // box1.classList.remove('two');
+                
+                // box1.style.fontSize = '3rem';
+                // box1.style.color = 'coral';
+                // box1.style.fontStyle = 'italic';
+                // box1.style.fontFamily = '궁서체';
+                // css는 style 태그에서 작업하자
+
+                box1.classList.add('four');
+
+
+        };
+
+
+    </script>
+
+</body>
+</html>

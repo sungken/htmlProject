@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex43_template.html -->
+
+
+    <script>
+        // Template String
+        // - ES6
+        let name = '홍길동';
+        let age = 20;
+
+        // java에서 printf와 같은 개념으로 쓰일수 있는 용법
+        // 1. 'string' 
+        // 2. "string"
+        // 3. `string` > template string > 역따움표
+
+        let a = 'string';
+        let b = "string";
+        let c = `string`;
+
+        console.log( a === b);
+        console.log( a === c);
+
+        console.log(`이름은 ${name}이고, 나이는 ${age-1}세 입니다.`);
+        console.log(`현재 시간은 ${new Date()}입니다.`);
+
+        let str = `
+        
+        하나
+        둘
+        셋
+        
+        
+        
+        
+        `;
+        console.log(str);
+
+        // 테이블 > 새 행 추가
+        let temp2 = '<tr>'
+                    + '<td>100</td>'
+                    + '</tr>';
+            // 원래는 이렇게 불편하게 만들지만
+            //역 따움표를 사용하면
+        let temp3 = `<tr>
+                <td>100</td>'
+                </tr>`;
+            // 이렇게 도 가능
+
+        
+
+
+
+    </script>
+
+
+</body>
+</html>
