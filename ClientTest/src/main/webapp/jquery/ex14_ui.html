@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui/jquery-ui.css">
+    <style>
+        #box{
+            width: 250px;
+            height: 250px;
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex14_ui.html -->
+    <h1>Interactions <small>Draggable</small></h1>
+
+    <div id="box"></div>
+
+    <img src="images/catty01.png" id="cat1" class="cat">
+    <img src="images/catty02.png" id="cat2" class="cat">
+    <img src="images/catty03.png" id="cat3" class="cat">
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="ui/jquery-ui.js"></script>
+    <script>
+        $('.cat').draggable({
+            cursor: 'move'
+        });
+
+        // 박스안에 뭔가 들어가면 이벤트 생성
+        $('#box').droppable({
+            //고양이가 얼만큼 들어가야? 상자로 들어갈지 취급할 것인가? 
+            tolerance: 'fit',
+
+
+            drop: function(event, ui) {
+
+                //alert();
+
+                $(this).css('background-color', 'cornflowerblue');
+
+                //어떤 고양이가 들어왔는지?
+                //alert(ui.draggable.attr('src'));
+                ui.draggable.css('opacity', .5);
+
+                // 고양이가 한번 들어가면 못 빠져 나옴
+                ui.draggable.draggable({
+                    containment: '#box'
+                });
+            }
+        });
+
+
+        // 고양이를 더블클릭해서 밖으로 빠져나오게 하기
+        $('.cat').dblclick(() => {
+
+            $('#box').css('background-color', 'gold');
+
+            $(event.target).css('opacity', 1).draggable({
+                containment: ''
+            });
+
+        });
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

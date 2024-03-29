@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ui/jquery-ui.css">
+    <title>Document</title>
+    <style>
+        #cat1{
+            border: 1px solid black;
+        }
+
+        #box{
+            width: 300px;
+            height: 200px;
+            border: 1px solid black;
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex13_ui.html -->
+
+    <h1>Interactions <small>Draggable</small></h1>
+
+    <img src="images/catty01.png" id="cat1">
+
+    <div id="box">
+        <img src="images/catty02.png" id="cat2">
+    </div>
+
+
+
+
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="ui/jquery-ui.js"></script>
+    <script>
+
+        $('#cat1').draggable({
+            // axis: 'x'
+            // axis: 'y'
+            // grid: [128, 128] // 특정값씩 움직이기
+            snap: '#box'
+        });
+
+        
+        $('#box').draggable({
+                // axis: 'x'
+                // axis: 'y'
+                // grid: [128, 128] // 특정값씩 움직이기
+            });
+            
+            $('#cat2').draggable({
+                containment: '#box' // 자기가 담겨있는 박스 안에 서 나올수 없게 하기
+            });
+
+
+
+    </script>
+</body>
+</html>

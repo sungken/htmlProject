@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui/jquery-ui.css">
+    <style>
+
+        #member{
+            width: 1000px;
+            display: flex;
+        }
+
+        #member img{
+            border: 5px solid coral;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ex17_ui.html -->
+    <h1>Interactions <small>Selectable</small></h1>
+
+    <h1>반려 동물</h1>
+
+    <ul id="list">
+        <li>강아지</li>
+        <li>고양이</li>
+        <li>도마뱀</li>
+        <li>코끼리</li>
+        <li>사자</li>
+    </ul>
+
+    <hr>
+
+    <h1>팀원 구성</h1>  
+
+    <div id="member">
+        <img src="images/man_01.png" data-name="홍길동">
+        <img src="images/man_02.png" data-name="아무개">
+        <img src="images/man_03.png" data-name="하하하">
+        <img src="images/woman_01.png" data-name="호호호">
+        <img src="images/woman_02.png" data-name="김영희">
+        <img src="images/woman_03.png" data-name="꽃분이">
+    </div>
+
+    <hr>
+
+    <input type="button" value="명단 순서 확인하기" id="btn">
+    <div id="result"></div>
+
+    
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="ui/jquery-ui.js"></script>
+    <script>
+
+        // li를 드래그 해서 위치를 바꿔 정렬하는 방법
+        $('#list').sortable();
+
+        $('#member').sortable();
+
+
+        // 유동적으로 멤버 확인하기
+        $('#btn').click(function(){
+            //list.forEach((item, index) => {}); - 자바
+           //$(list).each((index, item) => {}); - 제이쿼리
+            $('#member').children().each((index, item) => {
+                
+                //obj.dataset['name']
+                $('#result').append('<div>' + $(item).data('name') + '</div>');
+
+            });
+
+        });
+
+
+
+
+
+    </script>
+</body>
+</html>
