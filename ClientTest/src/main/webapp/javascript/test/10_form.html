@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: 'GmarketSansMedium';
+            color: #777;
+            border-collapse: collapse;
+        }
+
+        h1{
+            font-size: 2rem;
+            display: block;
+        }
+
+        table{
+            border: 1px solid #777;
+            
+
+        }
+
+        th{
+            border: 1px solid #777;
+            background-color: #EEEEEE;
+            padding: 0;
+            margin: 0;
+            width: 165px;
+            height: 50px;
+
+        }
+
+        td{
+            border: 1px solid #777;
+            width: 435px;
+        }
+
+        input{
+            margin: 0 0 0 10px;
+        }
+
+        #line1 input{
+            padding: 0;
+            width: 70px;
+            height: 23px;
+        }
+
+        #line2 #birthNum1{
+            padding: 0;
+            width: 70px;
+            height: 23px;
+        }
+
+        #line2 #birthNum2, #line2 #birthNum3{
+            padding: 0;
+            width: 35px;
+            height: 23px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <form name="form1">
+        <table>
+            <tr>
+                <th>주민번호</th>
+                <td id="line1">
+                    <input type="text" value="" id="humanNum1">
+                    -
+                    <input type="text" value="" id="humanNum2">
+                </td>
+            </tr>
+            <tr>
+                <th>생년월일</th>
+                <td id="line2">
+                    <input type="text" value="" id="birthNum1">년 
+                    <input type="text" value="" id="birthNum2">월 
+                    <input type="text" value="" id="birthNum3">일
+                </td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td id="line3">
+                    <input type="radio" value="남자" id="man">남자
+                    <input type="radio" value="여자" id="woman">여자
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+
+
+
+    <script>
+
+        let humanNum1 = document.getElementById('humanNum1');
+
+
+        humanNum1.TEXT_NODE
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -75,7 +75,12 @@
         <table id="tbl1">
             <tr>
                 <th>우편번호</th>
-                <td><input type="text" id="box1"><input type="button" value="우편번호검사하기" id="btn1" onclick="search()";></td>
+                <td><input type="text" id="box1">
+                    <!-- <a href="/ClientTest/src/main/webapp/javascript/test/8_formTest.html" target='_top'> -->
+                    <a href="/ClientTest/src/main/webapp/javascript/test/8_form2.html" onclick="window.open(this.href, '_blank', 'width=300, height=200'); return false;">
+                        <input type="button" value="우편번호검사하기" id="btn1" onclick="search()";>
+                    </a>
+                </td>
             </tr>
             <tr>
                 <th>주소</th>
@@ -87,7 +92,8 @@
             </tr>
         </table>
     </form>
-
+    
+    
 
 
 

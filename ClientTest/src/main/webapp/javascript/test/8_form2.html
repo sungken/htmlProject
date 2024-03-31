@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'GmarketSansMedium';
+            color: #777;
+        }
+
+        input{
+            display: block;
+            margin: 15px 0 15px 5px;
+            padding: ;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <input type="button" value="서울시 강남구 역삼동" id="btn1">
+    <input type="button" value="서울시 강남구 대치동" id="btn2">
+    <input type="button" value="서울시 강남구 도곡동" id="btn3">
+    
+
+<script>
+
+    const btn1 = document.getElementById('btn1');
+    const btn2 = document.getElementById('btn2');
+    const btn3 = document.getElementById('btn3');
+
+    const box1 = document.querySelector("#box1");
+
+
+    btn1.onclick = function(){
+        box1.innerHTML += 'asdar';
+        
+    }
+
+</script>
+    
+</body>
+</html>
